@@ -1,0 +1,19 @@
+Sigmoid function: f(x) = 1 / (1+e^ -x)
+
+Tanh function: f(x) = 2 / (1 + e ^ -2x) - 1
+
+ReLU: f(x) = max(0, x)
+
+Leaky ReLU: f(x) = x, if x > 0, else aX, where x is a small slope(eg. 0.01)
+
+h:     shape (32, 64)      — batch of 32 examples, 64 hidden units each
+W2:    shape (64, 27)      — weight matrix
+b2:    shape (27,)         — bias
+logits = h @ W2 + b2        — shape (32, 27)
+
+The rule (memorize this — it comes up constantly)
+
+dh  = dlogits @ W2.T
+dW2 = h.T @ dlogits
+db2 = dlogits.sum(0)
+

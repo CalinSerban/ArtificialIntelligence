@@ -27,6 +27,9 @@ print("C[5] (the vector for char 'e'):", C[5].tolist() if C is not None else Non
 # TODO b: embed the WHOLE dataset in one shot: emb = C[X]
 #   X is (num, 3) integers -> emb becomes (num, 3, EMB_DIM):
 #   each of the 3 context chars replaced by its EMB_DIM-vector.
+# Example: if X = [[0, 2, 4],
+#                  [1, 3, 0]] then emb = [[[C[0]], [C[2]], [C[4]]],
+#                                     [[C[1]], [C[3]], [C[0]]]]
 emb = C[X] if C is not None else None
 
 if emb is not None:

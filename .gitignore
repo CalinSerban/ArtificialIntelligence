@@ -1,2 +1,5 @@
 .venv/
 venv/
+CLAUDE.md
+ROADMAP.md
+.env
